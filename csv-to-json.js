@@ -1,8 +1,8 @@
 // Importing modules: fs, path, csvtojson
 const fs = require('fs');
-const csvFilePath = 'customer-data.csv';
+const myCsvFilePath = 'customer-data.csv';
 
-function csvToJson() {
+function csvToJson(csvFilePath) {
   // Use fs module to read the csv file and extract the data
   fs.readFile(csvFilePath, 'utf-8', (err, data) => {
 
@@ -34,6 +34,6 @@ function csvToJson() {
   })
 }
 
-csvToJson();
+csvToJson(myCsvFilePath);
 
 
